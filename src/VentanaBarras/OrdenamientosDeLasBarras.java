@@ -28,6 +28,7 @@ public class OrdenamientosDeLasBarras extends JPanel{
     protected int currentIndex;
     private int animationSpeed;
     private String [] numeroAltura;
+    public int edad = 34;
     /**
      * Constructor de la clase 
      * @param width
