@@ -1,11 +1,16 @@
 package Principal;
-/**
- * @author Abraham Farfan/Jordan Contreras
- */
-import VentanaBarras.GeneracionDeBarras;
-public class Principal {
-    public static void main(String[] args) {		
-	   new GeneracionDeBarras(800, 600).setVisible(true);	   
-	}
-}
 
+import Control.Controlador;
+import javax.swing.SwingUtilities;
+import Vista.VentanaPrincipal;
+
+public class Principal {
+
+      public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaPrincipal ventana = new VentanaPrincipal(Controlador.getNombres());
+            new Controlador(ventana);
+            ventana.setVisible(true);
+        });
+    }
+}
